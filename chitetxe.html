@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết xe</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      .car-detail-container {
+        max-width: 700px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .car-detail-img {
+        width: 320px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+      }
+      .car-detail-info {
+        margin-bottom: 24px;
+        text-align: center;
+      }
+      .car-detail-info h2 {
+        margin-bottom: 12px;
+      }
+      .car-detail-info p {
+        margin: 6px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">Chi tiết xe</header>
+    <div class="car-detail-container">
+      <img
+        class="car-detail-img"
+        src="https://www.mgmtoyota.com/wp-content/uploads/2023/05/MM2010_1602-2023.jpg"
+        alt="Toyota Vios 2024"
+      />
+      <div class="car-detail-info">
+        <h2>Toyota Vios 2024</h2>
+        <p>Giá thuê: <b>600.000đ/ngày</b></p>
+        <p>Số chỗ: 4</p>
+        <p>Màu sắc: Trắng</p>
+        <p>
+          Mô tả: Xe tiết kiệm nhiên liệu, nội thất rộng rãi, phù hợp gia đình.
+        </p>
+      </div>
+      <form id="dat-xe-form" style="width: 100%; max-width: 400px">
+        <h3>Đặt xe này</h3>
+        <input type="text" name="ten" placeholder="Họ và tên" required />
+        <input type="tel" name="sdt" placeholder="Số điện thoại" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="date" name="ngay" required />
+        <input type="text" name="diemdon" placeholder="Điểm đón" required />
+        <input type="text" name="diemtra" placeholder="Điểm trả" required />
+        <button type="submit">Đặt xe</button>
+        <div id="dat-xe-thongbao" style="margin-top: 8px; color: red"></div>
+      </form>
+    </div>
+    <script>
+      document.getElementById("dat-xe-form").onsubmit = function (e) {
+        e.preventDefault();
+        document.getElementById("dat-xe-thongbao").style.color = "green";
+        document.getElementById("dat-xe-thongbao").textContent =
+          "Đặt xe thành công!";
+        this.reset();
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      body {
+        background: #f0f1f3;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">HỆ THỐNG CHO THUÊ XE Ô TÔ</header>
+    <div class="form-container">
+      <form class="form-box" id="login-form">
+        <h2>Đăng nhập</h2>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Tên đăng nhập"
+          required
+          autocomplete="username"
+        />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Mật khẩu"
+          required
+          autocomplete="current-password"
+        />
+        <div class="forgot-link">
+          <a href="http://localhost:8080/xulydangky/quenmatkhau.html">Quên mật khẩu?</a>
+        </div>
+        <button type="submit">Đăng nhập</button>
+        <div id="login-error" style="color: red"></div>
+        <p>
+          Chưa có tài khoản?
+          <a href="http://localhost:8080/xulydangky/dangky.html"><u>Đăng ký</u></a>
+        </p>
+        <p>
+          <a href="http://localhost:8080/xulydangky/trangchu.html"><u>Quay về trang chủ</u> </a>
+        </p>
+      </form>
+    </div>
+    <script>
+      if (localStorage.getItem('isLoggedIn') === 'true') {
+        window.location.href = 'http://localhost:8080/xulydangky/trangchu.html';
+      }
+
+      document.getElementById('login-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        document.getElementById('login-error').textContent = "";
+        fetch('xulydangnhap.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+          if (data.trim() === 'success') {
+            localStorage.setItem('isLoggedIn', 'true');
+            window.location.href = 'http://localhost:8080/xulydangky/trangchu.html';
+          } else {
+            document.getElementById('login-error').textContent = data.trim() || 'Sai tài khoản hoặc mật khẩu!';
+          }
+        })
+        .catch(() => {
+          document.getElementById('login-error').textContent = 'Lỗi kết nối máy chủ!';
+        });
+      });
+    </script>
+  </body>
+</html>

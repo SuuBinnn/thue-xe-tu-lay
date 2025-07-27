@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      body { background: #f0f1f3; }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">HỆ THỐNG CHO THUÊ XE Ô TÔ</header>
+    <div class="form-container">
+      <form
+        class="form-box"
+        id="register-form"
+        action="xulydangky.php"
+        method="post"
+        onsubmit="return handleRegister(event)"
+      >
+        <h2>Đăng ký</h2>
+        <input
+          type="text"
+          name="username"
+          placeholder="Tên đăng nhập"
+          required
+        />
+        <input type="email" name="email" placeholder="Email" required />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Mật khẩu"
+          required
+        />
+        <input
+          type="password"
+          name="repassword"
+          id="repassword"
+          placeholder="Nhập lại mật khẩu"
+          required
+        />
+        <input type="text" name="address" placeholder="Địa chỉ" required />
+        <button type="submit">Đăng ký</button>
+        <div id="register-message" style="color:red;margin-top:8px;"></div>
+        <p>
+          Đã có tài khoản?
+          <a href="http://localhost:8080/xulydangky/dangnhap.html">Đăng nhập</a>
+        </p>
+        <p>
+          <a href="http://localhost:8080/xulydangky/trangchu.html"
+            >Quay về trang chủ</a
+          >
+        </p>
+      </form>
+    </div>
+    <script>
+      function handleRegister(e) {
+        e.preventDefault();
+        var form = document.getElementById("register-form");
+        var formData = new FormData(form);
+        var pw = formData.get("password");
+        var repw = formData.get("repassword");
+        var msg = document.getElementById("register-message");
+        msg.style.color = "red";
+        msg.textContent = "";
+
+        if (pw !== repw) {
+          msg.textContent = "Mật khẩu và Nhập lại mật khẩu phải giống nhau!";
+          return false;
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", form.action, true);
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            if (xhr.responseText.includes("Đăng ký thành công")) {
+              msg.style.color = "green";
+              msg.textContent = "Đăng ký thành công!";
+              form.reset();
+            } else {
+              msg.textContent = xhr.responseText;
+            }
+          } else {
+            msg.textContent = "Lỗi kết nối máy chủ.";
+          }
+        };
+        xhr.send(formData);
+        return false;
+      }
+    </script>
+  </body>
+</html>

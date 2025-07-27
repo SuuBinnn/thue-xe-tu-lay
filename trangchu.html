@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DV Thuê Xe KTPM</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">DV Thuê Xe KTPM</div>
+        <nav>
+          <ul>
+            <li><a href="trangchu.html">Trang chủ</a></li>
+            <li><a href="xe.html">Các loại xe</a></li>
+            <li><a href="thuexe.html">Thuê Xe</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
+            <li><a href="#" id="login-logout-btn" class="btn">Đăng nhập</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Thuê xe tự lái toàn quốc</h1>
+        <p>Giá tốt - Giao xe tận nơi - Đặt xe dễ dàng</p>
+        <form id="searchForm" class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Nhập địa điểm, loại xe..."
+          />
+          <button type="submit">Tìm xe</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>Vì sao nên chọn DV Thuê Xe KTPM?</h2>
+        <div class="feature-list">
+          <div class="feature-item">
+            <img
+              src="https://img.icons8.com/ios/100/car--v1.png"
+              alt="car icon"
+            />
+            <h3>Đa dạng xe</h3>
+            <p>Từ phổ thông đến cao cấp, có tài xế hoặc tự lái.</p>
+          </div>
+          <div class="feature-item">
+            <img
+              src="https://img.icons8.com/ios/100/security-checked--v1.png"
+              alt="secure icon"
+            />
+            <h3>An toàn & minh bạch</h3>
+            <p>Thông tin rõ ràng, đánh giá người dùng xác thực.</p>
+          </div>
+          <div class="feature-item">
+            <img
+              src="https://img.icons8.com/ios/100/time--v1.png"
+              alt="time icon"
+            />
+            <h3>Tiện lợi</h3>
+            <p>Đặt xe nhanh chóng, giao nhận xe tận nơi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Danh sách xe nổi bật -->
+    <section class="car-list">
+      <div class="container">
+        <h2>Xe Dành Cho Bạn</h2>
+        <div class="car-grid">
+          <div
+            class="car-item"
+            data-name="Toyota Vios 2024 số tự động"
+            data-price="600.000đ/ngày"
+            data-img="https://www.mgmtoyota.com/wp-content/uploads/2023/05/MM2010_1602-2023.jpg"
+            data-desc="Toyota Vios 2024 <br>.
+            Toyota Vios 2024 <br>
+            Truyền động: Số tự động <br>
+            Số ghế: 4 chỗ <br>
+            Nhiên liệu: Xăng <br>
+            Tiêu hao: 6L/100km
+            "
+          >
+            <img
+              src="https://www.mgmtoyota.com/wp-content/uploads/2023/05/MM2010_1602-2023.jpg"
+              alt="Toyota Vios"
+            />
+            <h3>Toyota Vios 2024</h3>
+            <p>Giá thuê: 600.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="Toyota Fortuner AT 2022 số tự động"
+            data-price="900.000đ/ngày"
+            data-img="https://th.bing.com/th/id/R.ab916cd25a16dfbdac1099bc092e9692?rik=SEcKzy2fN4aWDw&pid=ImgRaw&r=0"
+            data-desc="Fortuner - một mấu SUV thực thụ cho gia đình,
+             xe được trang bị động cơ xăng 2.4 mang đến sức mạnh vượt trội,
+              đi cùng với đó là hộp số tự động - trợ thủ đắc lực cho người lái"
+          >
+            <img
+              src="https://th.bing.com/th/id/R.ab916cd25a16dfbdac1099bc092e9692?rik=SEcKzy2fN4aWDw&pid=ImgRaw&r=0"
+              alt="Toyota Fortuner"
+            />
+            <h3>Toyota Fortuner AT 2022</h3>
+            <p>Giá thuê: 900.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="Toyota Innova 2022 số tự động"
+            data-price="800.000đ/ngày"
+            data-img="https://static.wixstatic.com/media/bce131_3b08c203a95148988b62895b5ee87f17~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
+            data-desc="Toyota Innova (AT) số tự động, đăng kí tháng 08/2022. <br>
+             Xe gia đình mới đẹp, nội thất nguyên bản, sạch sẽ, bảo dưỡng thường xuyên. <br>
+            Xe rộng rãi, an toàn, tiện nghi, phù hợp cho gia đình du lịch. <br>
+            Xe trang bị hệ thống cảm biến lùi, 2 chế độ lái (ECO, POWER), phanh ABS,... "
+          >
+            <img
+              src="https://static.wixstatic.com/media/bce131_3b08c203a95148988b62895b5ee87f17~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
+              alt="Toyota Innova"
+            />
+            <h3>Toyota Innova E AT 2022</h3>
+            <p>Giá thuê: 800.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="Ford Ranger Raptor 2024 số tự động"
+            data-price="900.000đ/ngày"
+            data-img="https://cka-dash.s3.amazonaws.com/129-0918-RF225/model2.png"
+            data-desc="Ford Ranger Raptor"
+          >
+            <img
+              src="https://cka-dash.s3.amazonaws.com/129-0918-RF225/model2.png"
+              alt="Ford Raptor"
+            />
+            <h3>Ford Ranger Raptor 2024</h3>
+            <p>Giá thuê: 900.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="Toyota Veloz 2023 số tự động"
+            data-price="650.000đ/ngày"
+            data-img="https://www.toyotasutan.com/product/veloz/360slider/data1/images/24q360ext_copy.png"
+            data-desc="Toyota Veloz"
+          >
+            <img
+              src="https://www.toyotasutan.com/product/veloz/360slider/data1/images/24q360ext_copy.png"
+              alt="Toyota Veloz"
+            />
+            <h3>Toyota Veloz 2023</h3>
+            <p>Giá thuê: 650.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="Hyundai i10 2020 số tự động"
+            data-price="500.000đ/ngày"
+            data-img="https://cdn1.acedms.com/uploads/category/hyundai/20200128131338000000-3156422753238668289.jpg"
+            data-desc="Hyundai I10"
+          >
+            <img
+              src="https://cdn1.acedms.com/uploads/category/hyundai/20200128131338000000-3156422753238668289.jpg"
+              alt="Hyundai i10"
+            />
+            <h3>Hyundai i10 2020</h3>
+            <p>Giá thuê: 500.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="Hyundai Accent 2023 số tự động"
+            data-price="600.000đ/ngày"
+            data-img="https://cdn.wheel-size.com/automobile/body/hyundai-accent-2017-2022-1639977189.8068259.jpg"
+            data-desc="Hyundai Accent 2023"
+          >
+            <img
+              src="https://cdn.wheel-size.com/automobile/body/hyundai-accent-2017-2022-1639977189.8068259.jpg"
+              alt="Hyundai Accent"
+            />
+            <h3>Hyundai Accent 2023</h3>
+            <p>Giá thuê: 600.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="Mitsubishi Xpander AT ECO 2023 số tự động"
+            data-price="750.000đ/ngày"
+            data-img="https://www.mitsubishi-motors.co.za/wp-content/uploads/2023/01/xpander-front.png"
+            data-desc="Mitsubishi Xpander 2023"
+          >
+            <img
+              src="https://www.mitsubishi-motors.co.za/wp-content/uploads/2023/01/xpander-front.png"
+              alt="Mitsubishi Xpander"
+            />
+            <h3>Mitsubishi Xpander 2023</h3>
+            <p>Giá thuê: 750.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="KIA Carnival 2025 số tự động"
+            data-price="1.200.000đ/ngày"
+            data-img="https://kia.co.nz/assets/Uploads/models/2021-redesign/Carnival/Carnival-colours-small-VH-Silky-Silver.png"
+            data-desc="KIA Carnival Hybrid 2025"
+          >
+            <img
+              src="https://kia.co.nz/assets/Uploads/models/2021-redesign/Carnival/Carnival-colours-small-VH-Silky-Silver.png"
+              alt="Mitsubishi Xpander"
+            />
+            <h3>KIA Carnival Hybrid 2025</h3>
+            <p>Giá thuê: 750.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+            <div
+            class="car-item"
+            data-name="KIA Carnival 2025 số tự động"
+            data-price="1.200.000đ/ngày"
+            data-img="https://kia.co.nz/assets/Uploads/models/2021-redesign/Carnival/Carnival-colours-small-VH-Silky-Silver.png"
+            data-desc="KIA Carnival Hybrid 2025"
+          >
+            <img
+              src="https://kia.co.nz/assets/Uploads/models/2021-redesign/Carnival/Carnival-colours-small-VH-Silky-Silver.png"
+              alt="Mitsubishi Xpander"
+            />
+            <h3>KIA Carnival Hybrid 2025</h3>
+            <p>Giá thuê: 750.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="xe điện Vinfast VF3"
+            data-price="500.000đ/ngày"
+            data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiU6sbv7ZrKc2cqtQAFy5WXj_q6zNfntWSbA&s"
+            data-desc="Vinfast VF3"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiU6sbv7ZrKc2cqtQAFy5WXj_q6zNfntWSbA&s"
+              alt="Vinfast VF3"
+            />
+            <h3>Vinfast VF3</h3>
+            <p>Giá thuê: 500.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="xe điện Vinfast VF6"
+            data-price="900.000đ"
+            data-img="https://vinfast3sthanhhoa.com/wp-content/uploads/2023/09/vf6-mau-trang-1-1110x1032-600x600-1.jpg"
+            data-desc="Vinfast VF6"
+          >
+            <img
+              src="https://vinfast3sthanhhoa.com/wp-content/uploads/2023/09/vf6-mau-trang-1-1110x1032-600x600-1.jpg"
+              alt="Vinfast VF6"
+            />
+            <h3>Vinfast VF6</h3>
+            <p>Giá thuê: 900.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="xe điện Vinfast VF7"
+            data-price="900.000đ"
+            data-img="data:image/webp;base64,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"
+            data-desc="Vinfast VF7"
+          >
+            <img
+              src="data:image/webp;base64,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"
+              alt="Vinfast VF6"
+            />
+            <h3>Vinfast VF7</h3>
+            <p>Giá thuê: 1.000.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          <div
+            class="car-item"
+            data-name="xe điện Vinfast VF9"
+            data-price="1.600.000đ"
+            data-img="https://imgcdn.zigwheels.ph/large/gallery/color/205/3322/vinfast-vf-9-color-810689.jpg"
+            data-desc="Vinfast VF9"
+          >
+            <img
+              src="https://imgcdn.zigwheels.ph/large/gallery/color/205/3322/vinfast-vf-9-color-810689.jpg"
+              alt="Vinfast VF9"
+            />
+            <h3>Vinfast VF9</h3>
+            <p>Giá thuê: 1.600.000đ/ngày</p>
+            <button>Xem chi tiết</button>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-main">
+          <!-- Thương hiệu -->
+          <div class="footer-section">
+            <div class="footer-brand">
+              <div class="footer-logo">
+                <i class="fas fa-car"></i>
+              </div>
+              <div class="footer-brand-text">ChoThueXeKTPM</div>
+            </div>
+            <p class="footer-description">
+              Người bạn đồng hành tuyệt vời cho mọi chuyến đi và cuộc phiêu lưu
+              phi thường của bạn.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Dịch vụ -->
+          <div class="footer-section footer-services">
+            <h3>Services</h3>
+            <ul>
+              <li>Cho thuê ngắn hạn</li>
+              <li>Cho thuê dài hạn</li>
+              <li>Xe sang trọng</li>
+              <li>Bảo hiểm cao cấp</li>
+            </ul>
+          </div>
+
+          <!-- Liên hệ -->
+          <div class="footer-section footer-contact">
+            <h3>Contact</h3>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+33 1 23 45 67 89</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>chothuexektpm@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Cần Thơ, Việt Nam</span>
+            </div>
+          </div>
+
+          <!-- Theo dõi -->
+          <div class="footer-section footer-follow">
+            <h3>Theo dõi chúng tôi</h3>
+            <p>
+              Cập nhật những tin tức mới nhất và ưu đãi đặc biệt từ chúng tôi.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2024 MysticCars. Tous droits réservés. Créé avec magie et passion.
+            <br />
+            <a href="#">Connecting to webview...</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="chucnang.js"></script>
+    <!-- Popup -->
+    <div id="carModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImg" src="" alt="" />
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+        <p id="modalPrice"></p>
+        <a href="thuexe.html"><button>Thuê ngay</button></a>
+      </div>
+    </div>
+
+    <script src="chucnangDKDN.js"></script>
+    <script>
+      // Đổi nút đăng nhập thành đăng xuất nếu đã đăng nhập
+      var btn = document.getElementById("login-logout-btn");
+      if (localStorage.getItem("isLoggedIn") === "true") {
+        btn.textContent = "Đăng xuất";
+        btn.href = "#";
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          alert("Bạn đã đăng xuất!");
+          window.location.reload();
+        });
+      } else {
+        btn.textContent = "Đăng nhập";
+        btn.href = "http://localhost:8080/xulydangky/dangnhap.html";
+      }
+    </script>
+  </body>
+</html>
